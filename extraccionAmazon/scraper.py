@@ -10,6 +10,11 @@ import re
 def iniciar_driver():
     options = Options()
     options.set_preference("intl.accept_languages", "es-ES,es")
+    
+    # Modo Headless (sin abrir ventana)
+    options.add_argument("--headless")  
+    options.add_argument("--disable-gpu")  # Opcional, mejora rendimiento en algunos casos
+    options.add_argument("--window-size=1920x1080")  # Para evitar errores de renderizado en headless
 
     driver = webdriver.Firefox(options=options)
     driver.get("https://www.amazon.com/")
