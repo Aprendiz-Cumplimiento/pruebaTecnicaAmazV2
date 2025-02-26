@@ -8,15 +8,15 @@ pipeline {
         }
         stage('Set up Python') {
             steps {
-                sh 'python3 -m venv venv'  // Crear entorno virtual
-                sh 'source venv/bin/activate'  // Activar entorno virtual
-                sh 'pip install --upgrade pip'  // Actualizar pip
-                sh 'pip install -r requirements.txt'  // Instalar dependencias
+                bat 'python3 -m venv venv'  // Crear entorno virtual
+                bat 'source venv/bin/activate'  // Activar entorno virtual
+                bat 'pip install --upgrade pip'  // Actualizar pip
+                bat 'pip install -r requirements.txt'  // Instalar dependencias
             }
         }
         stage('Run Script') {
             steps {
-                sh 'source venv/bin/activate && python main.py'  // Ejecutar tu código
+                bat 'source venv/bin/activate && python main.py'  // Ejecutar tu código
             }
         }
     }
