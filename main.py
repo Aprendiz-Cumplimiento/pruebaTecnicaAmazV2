@@ -7,7 +7,7 @@ def main():
     # Definir ruta relativa de trabajo de la Automatización
     path_root = os.path.dirname(os.path.abspath(__file__))
 
-    termino_busqueda = input("Ingrese el producto de su preferencia para buscar: ")
+    termino_busqueda = "carro"#input("Ingrese el producto de su preferencia para buscar: ")
 
     #Extracción de información requerida de Amazon
     driver, total_resultados, total_paginas = buscar_en_amazon(termino_busqueda)
