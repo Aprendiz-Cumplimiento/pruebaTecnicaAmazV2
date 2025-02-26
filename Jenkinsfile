@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Aprendiz-Cumplimiento/pruebaTecnicaAmazV2.git'
+                git branch: 'master', url: 'https://github.com/Aprendiz-Cumplimiento/pruebaTecnicaAmazV2.git'
             }
         }
         stage('Set up Python') {
